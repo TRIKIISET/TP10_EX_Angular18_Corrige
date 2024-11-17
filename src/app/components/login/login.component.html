@@ -1,14 +1,21 @@
 <div class="container">
     <img src="isetch.png" alt="Logo ISET" class="logo">
     <strong>Authentification</strong>
-            <div class="mb-3 mt-3">
-              <label  class="form-label">Nom d'utilisateur:</label>
-              <input type="text" class="form-control" placeholder="Introduisez votre nom d'utilisateur (etud ou prof)" >
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password:</label>
-              <input type="password" class="form-control" placeholder="Introduisez votre mot de passe (pwdEtud ou pwdProf)" >
-            </div>
-            <button type="button" class="btn btn-primary">S'authentifier</button>
-       
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3 mt-3">
+                <label  class="form-label">Nom d'utilisateur:</label>
+                <input type="text" class="form-control" formControlName="login"  placeholder="Introduisez votre nom d'utilisateur (etud ou prof)" >
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <input type="password" class="form-control" formControlName="pwd" placeholder="Introduisez votre mot de passe (pwdEtud ou pwdProf)" >
+              </div>
+              <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">S'authentifier</button>
+            </form>
+@if(displayError){
+  <div style="color:red">
+    Login ou mot de passe incorrect
+  </div>
+}
+                  
     </div>

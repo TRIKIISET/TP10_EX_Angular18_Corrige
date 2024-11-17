@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterEvent, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-public-menu',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './public-menu.component.html',
   styleUrl: './public-menu.component.css'
 })

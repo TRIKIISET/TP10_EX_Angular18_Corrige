@@ -1,5 +1,5 @@
 <div>
-    <img src="assets/isetch.png" alt="Logo ISET" class="logo">
+    <img src="isetch.png" alt="Logo ISET" class="logo">
     <strong class="text-center">Espace Etudiant</strong>
 </div>
 
@@ -8,13 +8,13 @@
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Informations</a>
+            <a class="nav-link" routerLink="/student/infos">Informations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Emplois du temps</a>
+            <a class="nav-link" routerLink="/student/schedule">Emplois du temps</a>
           </li>
         </ul> 
-        <button class="btn btn-light">Déconnexion</button>  
+        <button class="btn btn-light" (click)="onDisconnect()">Déconnexion</button>  
       </div>
     </div>
   </nav>

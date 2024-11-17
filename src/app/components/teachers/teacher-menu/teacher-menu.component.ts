@@ -2,13 +2,14 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-student-menu',
+  selector: 'app-teacher-menu',
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
-  templateUrl: './student-menu.component.html',
-  styleUrl: './student-menu.component.css'
+  templateUrl: './teacher-menu.component.html',
+  styleUrl: './teacher-menu.component.css'
 })
-export class StudentMenuComponent {
+export class TeacherMenuComponent {
+
   router: Router= inject(Router);
   onDisconnect(){
     localStorage.setItem('espace', 'forbidden');
